@@ -1,4 +1,4 @@
-#Amazon Clone
+# Amazon Clone
 
 Link: https://challenge-b5526.web.app/
 
