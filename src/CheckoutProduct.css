@@ -11,9 +11,10 @@
 .checkoutProduct__info > button {
   background: #f0c14b;
   border: 1px solid;
-  margin-top: 10px;
+  margin-top: 25px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  padding: 3px 5px 3px 5px;
 }
 
 .checkoutProduct__rating {

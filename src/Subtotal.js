@@ -3,6 +3,7 @@ import CurrencyFormat from "react-currency-format";
 import "./Subtotal.css";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { Button } from "@material-ui/core";
 
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
@@ -28,7 +29,7 @@ function Subtotal() {
         prefix={"$"}
       />
 
-      <button className="subtotal__button">Proceed to Checkout</button>
+      <Button className="subtotal__button">Proceed to Checkout</Button>
     </div>
   );
 }

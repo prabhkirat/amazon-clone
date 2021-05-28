@@ -1,6 +1,8 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
+import { Button } from "@material-ui/core";
+import FlipMove from "react-flip-move";
 
 function CheckoutProduct({ id, title, image, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -31,7 +33,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
               <p>⭐</p>
             ))}
         </div>
-        {<button onClick={removeFromBasket}>Remove from Basket</button>}
+        {<Button onClick={removeFromBasket}>Remove from Basket</Button>}
       </div>
     </div>
   );
