@@ -4,8 +4,10 @@ import "./Subtotal.css";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 import { Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 function Subtotal() {
+  const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
 
   return (
@@ -14,7 +16,7 @@ function Subtotal() {
         renderText={(value) => (
           <>
             <p>
-              Subtotal ({basket.length} items):{" "}
+              Subtotal ({basket?.length} items):{" "}
               <strong>{getBasketTotal(basket)}</strong>
             </p>
             <small className="subtotal__gift">
@@ -29,7 +31,12 @@ function Subtotal() {
         prefix={"$"}
       />
 
-      <Button className="subtotal__button">Proceed to Checkout</Button>
+      <Button
+        onClick={(e) => history.push("/payment")}
+        className="subtotal__button"
+      >
+        Proceed to Checkout
+      </Button>
     </div>
   );
 }

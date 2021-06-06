@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Product from "./Product";
-import ImageSlider from "./ImageSlider";
 
 function Home() {
+  const images = [
+    "https://images-na.ssl-images-amazon.com/images/G/15/digital/video/merch/2021/TV/BRND/BRND_MTH21_GWBleedingHero_1500x600_Final_en-CA_ENG_PVD6862._CB670220811_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/G/15/kindle/journeys/ZGU1ZTAyOWIt/ZGU1ZTAyOWIt-YTU0YWQzYjYt-w1500._CB655559622_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/G/15/CA-hq/2020/img/Pets_Products/XCM_Manual_1500x600_1216491_1122672_ca_ca_pet_month_d7cfc950_80b7_48ee_950b_c328cb3d4af5_jpg._CB419448200_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/G/15/kindle/journeys/YjdiZWM5NmEt/YjdiZWM5NmEt-MDNlNGE3MGEt-w1500._CB658366585_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/G/15/CA-hq/2021/img/Certified_Refurbished/XCM_Manual_1329890_1696416_CA_ca_gw_pc_tallhero_2x_ca_en_3859835_1500x600_1X_en_CA._CB668432380_.jpg",
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  const next = () => {
+    setIndex((i) => (i + 1) % images.length);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      next();
+    }, 4000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <div className="home">
       <div className="home__container">
-        {/* <img
-          className="home__image"
-          src="https://images-na.ssl-images-amazon.com/images/G/15/digital/video/merch/2021/TV/BRND/BRND_MTH21_GWBleedingHero_1500x600_Final_en-CA_ENG_PVD6862._CB670220811_.jpg"
-          alt=""
-        /> */}
-        <ImageSlider />
+        {/* <div className="home__leftArrow">&lt</div> */}
+        <img className="home__image" src={images[index]} alt="" />
+        {/* <div className="home__rightArrow">&gt</div> */}
       </div>
 
       <div className="home__row">
@@ -26,8 +45,7 @@ function Home() {
 
         <Product
           id="2"
-          title="Kenwood kMix Stand Mixer for Baking, 
-                Stylish Kitchen Mixer with K-Beaker, Dough Hock and Whisk, 5 Litre Glass Bowl"
+          title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-Beaker, Dough Hock and Whisk, 5 Litre Glass Bowl"
           price={239.0}
           image="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/kenwood-kmix-stand-mixer-chrome-582b40a.jpg?quality=90&resize=385%2C350"
           rating={4}
