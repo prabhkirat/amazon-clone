@@ -1,8 +1,28 @@
 # Amazon Clone
 
+Created a E-Commerce web application where:
+
+1. User can see a list of varoius products.
+2. User can add products to the cart.
+3. User can order products using real payment methods.
+
+
+## Demo
+
 Link: https://challenge-b5526.web.app/
 
+## Technology
 
+1. Front-end: ReactJS and React Context API, ES6, HTML, CSS
+2. Back-end: Firebase Authentication, Database, Functions and Hosting and ExpressJS, Stripe
+
+## Features
+
+1️⃣ Accounts and Login Page 👨‍👨‍👧‍👦
+2️⃣ Products Page 📦
+3️⃣ Cart and Checkout Page  🛒
+4️⃣ Real Payments 💳
+5️⃣ Order History Page 📖
 
 
 # Getting Started with Create React App
