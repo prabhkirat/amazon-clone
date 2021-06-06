@@ -23,11 +23,13 @@ Created a responsive and fully functional E-Commerce web application with ReactJ
 
 ## Features
 
-1️. Accounts and Login Page 👨‍👨‍👧‍👦 (User can login or register into the web app with the help of Firebase Authentication)
-2️. Products Page 📦 (User can add products to the basket)
-3️. Cart and Checkout Page  🛒 (User can process real time payments)
-4️. Real Payments 💳 (Real time payments are implemented thru Stripe Payment Infrastructure)
-5️. Order History Page 📖 (Firebase database is used for storing orders history for the user)
+1. Accounts and Login Page 👨‍👨‍👧‍👦 (User can login or register into the web app with the help of Firebase Authentication)
+2. Products Page 📦 (User can add products to the basket)
+3. Cart and Checkout Page  🛒 (User can process real time payments)
+4. Real Payments 💳 (Real time payments are implemented thru Stripe Payment Infrastructure)
+5. Order History Page 📖 (Firebase database is used for storing orders history for the user)
+
+
 
 
 # Getting Started with Create React App
